@@ -1,0 +1,11 @@
+<button (click)="create()" mat-flat-button color="primary">Criar</button>
+<ng-container *ngIf="usuarios$ | async as usuarios" >
+  <mat-list >
+
+    <ng-container *ngFor="let usuario of usuarios" >
+      <mat-list-item >{{ usuario.name }}</mat-list-item>
+    </ng-container>
+
+  </mat-list>
+
+</ng-container>
